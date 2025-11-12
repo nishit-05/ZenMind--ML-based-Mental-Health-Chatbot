@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenMind</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icon -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-papD3HxY+0QG3lM3hhbAmyEOYHgv3Yul5d7wyIwTC+jEo2mauIXxVt+WnTfJ+c7nT6+K+LWWYB95fYVVN5s5Bw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header>
+    <i class="fas fa-spa header-icon"></i>
+    <h1>ZenMind</h1>
+    <p class="tagline">Where calm meets conversation</p>
+  </header>
+
+  <div id="chat">
+    <div id="conversation"></div>
+    <div id="inputArea">
+      <input id="msg" placeholder="Type your message..." autocomplete="off" />
+      <button id="send">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const conversation = document.getElementById('conversation');
+    const msgInput = document.getElementById('msg');
+    const sendBtn = document.getElementById('send');
+
+    function appendMessage(text, cssClass) {
+      const div = document.createElement('div');
+      div.className = 'message ' + cssClass;
+      div.innerText = text;
+      conversation.appendChild(div);
+      conversation.scrollTop = conversation.scrollHeight;
+    }
+
+    async function sendMessage() {
+      const text = msgInput.value.trim();
+      if (!text) return;
+      appendMessage(text, 'user');
+      msgInput.value = '';
+      try {
+        const res = await fetch('http://127.0.0.1:5000/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text })
+        });
+        const data = await res.json();
+        appendMessage(data.response, 'bot');
+      } catch (err) {
+        appendMessage('⚠️ Error: Could not contact server.', 'bot');
+      }
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    msgInput.addEventListener('keypress', e => {
+      if (e.key === 'Enter') sendMessage();
+    });
+  </script>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

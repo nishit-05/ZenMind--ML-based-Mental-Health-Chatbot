@@ -54,7 +54,7 @@ By using an **intent-based ML model**, it provides contextually appropriate resp
 
 ## Vision
 
-ZenMind aims to bridge technology and empathy — creating an AI-driven space where users feel heard, supported, and at peace through conversation.
+ZenMind aims to bridge technology and empathy, creating an AI-driven space where users feel heard, supported, and at peace through conversation.
 
 
 ### Author

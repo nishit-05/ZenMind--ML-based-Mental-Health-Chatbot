@@ -1,5 +1,11 @@
 # ZenMind – ML-Based Mental Health Chatbot
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?logo=tensorflow&logoColor=white)
+![NLTK](https://img.shields.io/badge/NLTK-NLP-green)
+![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
+
 ZenMind is a **machine learning–based conversational chatbot** created to provide **emotional support** and **comforting dialogue** for users experiencing anxiety, depression, or stress.  
 Built with a focus on empathy and simplicity, ZenMind engages in supportive conversations using **Natural Language Processing (NLP)** and **Deep Learning**.
 
@@ -57,8 +63,15 @@ By using an **intent-based ML model**, it provides contextually appropriate resp
 ZenMind aims to bridge technology and empathy, creating an AI-driven space where users feel heard, supported, and at peace through conversation.
 
 
-### Author
+## License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+
+## Author
+
 **Nishit Dongre**  
-B.Tech in Electrical and Computer Engineering  
-[LinkedIn](https://linkedin.com/in/nishit-dongre-675031382) • [Email](mailto:nishitdongre@gmail.com)
+B.Tech in Electrical and Computer Engineering
+
+[LinkedIn](https://www.linkedin.com/in/nishitdongre/) • [Email](mailto:nishitdongre@gmail.com)
 

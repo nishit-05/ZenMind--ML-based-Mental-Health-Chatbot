@@ -6,14 +6,14 @@
 ![NLTK](https://img.shields.io/badge/NLTK-NLP-green)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
 
-ZenMind is a **machine learning–based conversational chatbot** created to provide **emotional support** and **comforting dialogue** for users experiencing anxiety, depression, or stress.  
+ZenMind is a **machine learning based conversational chatbot** created to provide **emotional support** and **comforting dialogue** for users experiencing anxiety, depression, or stress.  
 Built with a focus on empathy and simplicity, ZenMind engages in supportive conversations using **Natural Language Processing (NLP)** and **Deep Learning**.
 
 
 ## Purpose
 
 ZenMind was designed to make **mental health support more accessible** through an intelligent, always-available conversational interface.  
-By using an **intent-based ML model**, it provides contextually appropriate responses — creating a safe, calming, and non-judgmental environment for users to express themselves.
+By using an **intent-based ML model**, it provides contextually appropriate responses- creating a safe, calming, and non-judgmental environment for users to express themselves.
 
 
 ## What ZenMind Does
@@ -65,7 +65,7 @@ ZenMind aims to bridge technology and empathy, creating an AI-driven space where
 
 ## License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**- see the [LICENSE](LICENSE) file for details.
 
 
 ## Author
